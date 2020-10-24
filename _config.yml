@@ -34,9 +34,24 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# Disqus Comments
-disqus:
-  shortname: beyond-the-music
+# User settings
+
+author: Admin # put your name or a name of principal author of site/blog
+email: condellogregory@gmail.com
+disqus_shortname: beyond-the-music
+
+# Navigation menu
+links:
+  - title: Home
+    url: /
+  - title: About Me
+    url: /about
+  - title: Archive
+    url: /archive
+  - title: Contact
+    url: /contact
+  - title: Categories
+    url: /categories
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,27 +1,30 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+{%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+{{ content }}
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+<span class="comments-count"><a href="{{ page.url }}#disqus_thread"></a></span>
+<div>
+  {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
+  {% endfor %}
+</div>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+  {% if site.display-author-post-page %}
+    {% if page.author.name %}
+      <small><em>{{ site.var_guest_post_by }}: {{ page.author.name }} <a href="{{ page.author.site }}" title="{{ page.author.name }} website" target="_blank">({{ page.author.site }})</a></em></small>
+    {% else %}
+      {% if site.author %}
+        <small><em>{{ site.var_post_by }}: {{ site.author }}</em></small>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% if site.disqus_shortname %}
+    {% include comments.html %}
+  {% endif %}

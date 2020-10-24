@@ -1,0 +1,106 @@
+/*===========================
+1. Typography & General Style
+===========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  max-width: 728px;
+  margin: 20px auto 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 38px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 34px;
+}
+h5 {
+  font-size: 32px;
+}
+h6 {
+  font-size: 30px;
+}
+
+p {
+  line-height: 28px;
+}
+
+/*===========================
+2. Header
+===========================*/
+
+.logo {
+  max-width: 612px;
+  margin: 0 auto -10px auto;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #658b52;
+  border-bottom: 5px solid #ffa250;
+  border-radius: 0 0 4px 4px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/*===========================
+3. Main Body
+===========================*/
+.home ul.post-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.comments-count {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+.comments-count a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 8px;
+  background: #658b52;
+}
+
+/*===========================
+4. Footer
+===========================*/
