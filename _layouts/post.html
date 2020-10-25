@@ -8,12 +8,14 @@ layout: default
 
 {{ content }}
 
-<span class="comments-count"><a href="{{ page.url }}#disqus_thread"></a></span>
-<div>
+<div class="tags">
+  <b>Tags:</b>
   {% for tag in page.tags %}
       <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
   {% endfor %}
 </div>
+
+<span class="comments-count"><a href="{{ page.url }}#disqus_thread"></a></span>
 
   {% if site.display-author-post-page %}
     {% if page.author.name %}

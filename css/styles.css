@@ -8,7 +8,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   max-width: 728px;
-  margin: 20px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,11 +41,21 @@ p {
 /*===========================
 2. Header
 ===========================*/
-
-.logo {
-  max-width: 612px;
-  margin: 0 auto -10px auto;
+.logo-background {
+  background-color: #658b52;
+  border-bottom: 1px solid #374d2c;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
+@media only screen and (min-width: 728px) {
+  .logo {
+    max-width: 612px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+
 
 nav {
   text-align: center;
@@ -57,8 +67,7 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: #658b52;
-  border-bottom: 5px solid #ffa250;
-  border-radius: 0 0 4px 4px;
+  border-bottom: 7px solid #ffa250;
 }
 
 nav ul li {
@@ -75,6 +84,15 @@ nav ul li a {
   font-weight: 700;
 }
 
+nav ul li a:hover {
+  color: #ffa250;
+}
+
+.ads {
+  margin-top: 10px;
+  margin-bottom: -20px;
+}
+
 /*===========================
 3. Main Body
 ===========================*/
@@ -84,9 +102,43 @@ nav ul li a {
   padding: 0;
 }
 
+article {
+  padding: 0 5px 0 5px;
+}
+
+article h3 {
+  border-top: 1px solid black;
+  margin-bottom: 0;
+}
+
+article h3 a {
+  text-decoration: none;
+  color: #ffa250;
+  -webkit-text-stroke: 1px black;
+  font-size: 65px;
+}
+
+h1.page-heading {
+  font-size: 65px;
+}
+
+.post-meta {
+  display: block;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 700;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px 0 10px 5px;
+}
+
+.tags {
+  margin-bottom: 15px;
+}
 
 .comments-count {
   font-family: 'Amatic SC', cursive;
+  padding: 0;
   font-size: 30px;
 }
 
@@ -101,6 +153,22 @@ nav ul li a {
   background: #658b52;
 }
 
+.contact-page input[email] {
+
+}
+
 /*===========================
 4. Footer
 ===========================*/
+footer {
+  background-color: #658b52;
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+  border-top: 3px solid #ffa250;
+}
+
+footer a,
+footer a:visited {
+  color: #ffa250;
+}
