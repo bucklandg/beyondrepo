@@ -57,21 +57,6 @@ p {
   margin: 0 auto 0 auto;
 }
 
-@media only screen and (max-width: 727px) {
-  .logo {
-    display: none;
-  }
-  .mobile-logo {
-    display: block;
-    width: 100%;
-    max-width: 312px;
-    margin: 0 auto;
-    height: auto;
-  }
-}
-
-
-
 nav {
   text-align: center;
 }
@@ -117,10 +102,6 @@ nav ul li a:hover {
   padding: 0;
 }
 
-article {
-  padding: 0 5px 0 5px;
-}
-
 article h3 {
   border-top: 1px solid black;
   margin-bottom: 0;
@@ -153,7 +134,6 @@ h1.page-heading {
 
 .comments-count {
   font-family: 'Amatic SC', cursive;
-  padding: 0;
   font-size: 30px;
 }
 
@@ -186,4 +166,33 @@ footer {
 footer a,
 footer a:visited {
   color: #ffa250;
+}
+
+/*===========================
+5. Mobile
+===========================*/
+@media only screen and (max-width: 727px) {
+  .logo {
+    display: none;
+  }
+  .mobile-logo {
+    display: block;
+    width: 100%;
+    max-width: 312px;
+    margin: 0 auto;
+    height: auto;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  article h3 a {
+    font-size:40px;
+  }
+
+  h1.page-heading {
+    font-size: 40px;
+  }
+  article {
+    padding: 0 5px 0 5px;
+  }
 }
