@@ -193,6 +193,7 @@ footer a:visited {
     font-size: 40px;
   }
   article {
-    padding: 0 5px 0 5px;
+    padding: 0 8px 0 8px;
+    margin-left: 0 auto;
   }
 }
