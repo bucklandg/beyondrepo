@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="home">
+<div class="blog-post">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <h1 class="blog-post-title">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
@@ -13,21 +13,19 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        <div class="post-header">
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
+        <div class="entry-header">
+          <h3 class="blog-post-title">
+            <a href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
           </h3>
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ post.date | date: date_format }} - {{ post.author }}</span>
+          <p class="text-monospace">{{ post.date | date: date_format }} - {{ post.author }}</p>
         </div>
         {{ post.excerpt }}
       </li>
       {%- endfor -%}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
 </div>

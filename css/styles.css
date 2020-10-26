@@ -1,135 +1,109 @@
-/*===========================
-1. Typography & General Style
-===========================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  max-width: 728px;
-  margin: 0 auto 0 auto;
+/*.header {
+  background: lightyellow;
 }
+nav {
+  background: lightgreen;
+}
+article {
+  background: lightblue;
+}
+aside {
+  background: lightcoral;
+}
+footer {
+  background: lightgrey;
+}
+*/
+
+/*========================================================================
+
+1. Typography & Layout
+
+/* ======================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Amatic SC', cursive;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 45px;
 }
 h2 {
-  font-size: 38px;
+  font-size: 43px;
 }
 h3 {
-  font-size: 36px;
+  font-size: 41px;
 }
 h4 {
-  font-size: 34px;
+  font-size: 39px;
 }
 h5 {
-  font-size: 32px;
+  font-size: 37px;
 }
 h6 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
-p {
-  line-height: 28px;
+a,
+a:visited {
+  color: #658b52;
 }
 
-/*===========================
+/*========================================================================
+
 2. Header
-===========================*/
-.logo-background {
-  background-color: #658b52;
-  border-bottom: 1px solid #374d2c;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+/* ======================================================================*/
+
+img.logo {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.mobile-logo {
-  display: none;
+@media (max-width: 640px) {
+  img.logo {
+    max-width: 100%;
+  }
 }
 
-.logo {
-  max-width: 612px;
-  margin: 0 auto 0 auto;
+.navbar {
+  background: #658b52;
+  border-bottom: 4px solid #ffa250;
 }
 
-nav {
-  text-align: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #658b52;
-  border-bottom: 7px solid #ffa250;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: inline-block;
-  padding: 10px;
+.navbar a,
+.navbar-toggler {
   color: #fff;
-  text-decoration: none;
-  font-family: 'Amatic SC', cursive;
-  font-size: 30px;
-  font-weight: 700;
 }
 
-nav ul li a:hover {
-  color: #ffa250;
+
+/*========================================================================
+
+3. Main body
+
+/* ======================================================================*/
+article ul.post-list {
+  list-style: none;
+  padding-left: 1.5rem;
 }
 
-.ads {
-  margin-top: 10px;
-  margin-bottom: -20px;
+section {
+  padding-left: 1.5rem;
 }
 
-/*===========================
-3. Main Body
-===========================*/
-.home ul.post-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.single-post {
+  padding-left: 1.5rem;
 }
 
-article h3 {
-  border-top: 1px solid black;
-  margin-bottom: 0;
-}
-
-article h3 a {
-  text-decoration: none;
-  color: #ffa250;
-  -webkit-text-stroke: 1px black;
-  font-size: 65px;
-}
-
-h1.page-heading {
-  font-size: 65px;
-}
-
-.post-meta {
-  display: block;
-  font-style: italic;
-  font-size: 13px;
-  font-weight: 700;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 10px 0 10px 5px;
+.entry-header {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 15px;
 }
 
 .tags {
   margin-bottom: 15px;
+  font-style: italic;
 }
 
 .comments-count {
@@ -148,52 +122,32 @@ h1.page-heading {
   background: #658b52;
 }
 
-.contact-page input[email] {
+/*========================================================================
 
-}
+4. Sidebar
 
-/*===========================
-4. Footer
-===========================*/
-footer {
-  background-color: #658b52;
+/* ======================================================================*/
+h4.widget-title {
   padding: 8px;
+  font-size: 35px;
   color: #fff;
-  text-align: center;
-  border-top: 3px solid #ffa250;
+  background: #658b52;
+  border-bottom: 4px solid #ffa250;
 }
 
-footer a,
-footer a:visited {
-  color: #ffa250;
+aside ul.post-list {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/*===========================
-5. Mobile
-===========================*/
-@media only screen and (max-width: 727px) {
-  .logo {
-    display: none;
-  }
-  .mobile-logo {
-    display: block;
-    width: 100%;
-    max-width: 312px;
-    margin: 0 auto;
-    height: auto;
-  }
-  nav ul li a {
-    font-size: 15px;
-  }
-  article h3 a {
-    font-size:40px;
-  }
-
-  h1.page-heading {
-    font-size: 40px;
-  }
-  article {
-    padding: 0 8px 0 8px;
-    margin-left: 0 auto;
-  }
+.side-meta {
+  font-size: 13px;
+  font-style: italic;
 }
+
+
+/*========================================================================
+
+5. Footer
+
+/* ======================================================================*/

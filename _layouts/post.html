@@ -2,11 +2,17 @@
 layout: default
 ---
 
-{%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-{%- endif -%}
+<div class="single-post">
 
-{{ content }}
+  {%- if page.title -%}
+    <h1 class="blog-post-title">{{ page.title }}</h1>
+  {%- endif -%}
+
+
+
+  {{ content }}
+
+
 
 <div class="tags">
   <b>Tags:</b>
@@ -15,7 +21,7 @@ layout: default
   {% endfor %}
 </div>
 
-<span class="comments-count"><a href="{{ page.url }}#disqus_thread"></a></span>
+<div class="comments-count"><a href="{{ page.url }}#disqus_thread"></a></div>
 
   {% if site.display-author-post-page %}
     {% if page.author.name %}
@@ -30,3 +36,5 @@ layout: default
   {% if site.disqus_shortname %}
     {% include comments.html %}
   {% endif %}
+
+</div>
