@@ -12,7 +12,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
+      <li class="home-post">
         <div class="entry-header">
           <h3 class="blog-post-title">
             <a href="{{ post.url | relative_url }}">
@@ -22,6 +22,7 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <p class="text-monospace">{{ post.date | date: date_format }} - {{ post.author }}</p>
         </div>
+        <a href="{{ post.url }}"><img class="img-fluid" src="{{ post.thumbnail }}"></a>
         {{ post.excerpt }}
       </li>
       {%- endfor -%}

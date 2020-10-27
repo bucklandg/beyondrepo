@@ -22,6 +22,21 @@ footer {
 /* ======================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
+body {
+  background: #ff9e3b;
+}
+
+.container-xl {
+  background: white;
+  padding: 0;
+  border: 1px solid #364a2c;
+
+}
+
+.row {
+  padding: 0 10px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Amatic SC', cursive;
 }
@@ -55,6 +70,9 @@ a:visited {
 2. Header
 
 /* ======================================================================*/
+.header {
+  background: #658b52;
+}
 
 img.logo {
   margin-top: 15px;
@@ -68,13 +86,37 @@ img.logo {
 }
 
 .navbar {
+  border-top: 1px solid #364a2c;
   background: #658b52;
-  border-bottom: 4px solid #ffa250;
+  border-bottom: 1px solid #364a2c;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar a {
+    border-right: 1px solid #364a2c;
+    padding: 5px 10px;
+  }
+  .navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  input.form-control.mr-sm-2 {
+    margin-right: -1px !important;
+    border: none;
+    border-left: 1px solid #364a2c;
+    height: 47px;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
 }
 
 .navbar a,
 .navbar-toggler {
   color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
 }
 
 
@@ -88,17 +130,19 @@ article ul.post-list {
   padding-left: 0;
 }
 
-section {
-
+.home-post {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 30px;
 }
 
-.single-post {
-
-}
 
 .entry-header {
   border-bottom: 1px solid lightgrey;
   margin-bottom: 15px;
+}
+
+.img-fluid {
+  object-fit: cover;
 }
 
 .tags {
@@ -127,17 +171,22 @@ section {
 4. Sidebar
 
 /* ======================================================================*/
+.widget {
+  border: 1px solid #364a2c;
+  margin-bottom: 15px;
+}
 h4.widget-title {
   padding: 8px;
-  font-size: 35px;
+  font-size: 30px;
   color: #fff;
   background: #658b52;
-  border-bottom: 4px solid #ffa250;
+  border-bottom: 1px solid #364a2c;
 }
 
+.subscribe,
 aside ul.post-list {
   list-style-type: none;
-  padding-left: 0;
+  padding: 8px;
 }
 
 .side-meta {
@@ -151,3 +200,17 @@ aside ul.post-list {
 5. Footer
 
 /* ======================================================================*/
+footer {
+  background: #658b52;
+  border-top: 1px solid #364a2c;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+footer a,
+footer a:visited {
+  color: #ff9e3b;
+}
