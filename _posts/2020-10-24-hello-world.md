@@ -4,7 +4,7 @@ title: Hello World
 date: 2020-10-24 19:03 +0200
 tags: [Blogging, Jekyll]
 author: "Admin"
-thumbnail: "/assets/images/dunders.png"
+thumbnail: "/assets/images/site-shared-image.png"
 ---
 
 

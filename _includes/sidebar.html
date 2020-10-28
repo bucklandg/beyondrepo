@@ -1,17 +1,37 @@
 <div class="widget">
-  <h4 class="widget-title">Ultimi Post</h4>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="side-meta">{{ post.date | date: date_format }}</span>
-    </li>
-    {%- endfor -%}
-  </ul>
+  <div class="sidebar-search">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Cerca nel sito..." aria-label="Search">
+    </form>
+  </div>
 </div>
+
+<div class="latest-post">
+  <div class="widget">
+    <h4 class="widget-title">Ultimi Post</h4>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        <div class="row">
+          <div class="col-sm-7">
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </div>
+            <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="side-meta">{{ post.date | date: date_format }}</span>-->
+            <div class="col-sm-3">
+              <div class="sidebar-img">
+                <img src="{{ post.thumbnail }}">
+              </div>
+            </div>
+          </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
 <div class="widget">
   <h4 class="widget-title">Social</h4>
   <div class="subscribe">

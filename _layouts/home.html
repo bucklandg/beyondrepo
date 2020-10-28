@@ -13,16 +13,18 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li class="home-post">
-        <div class="entry-header">
-          <h3 class="blog-post-title">
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <p class="text-monospace">{{ post.date | date: date_format }} - {{ post.author }}</p>
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="blog-post-title">
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <p class="meta"><i>il</i> <b>{{ post.date | date: date_format }}</b> <i>da</i> <b>{{ post.author }}</b></p>
+          </div>
+          <div class="thumbnail"><a href="{{ post.url }}"><img class="img-fluid" src="{{ post.thumbnail }}"></a></div>
         </div>
-        <a href="{{ post.url }}"><img class="img-fluid" src="{{ post.thumbnail }}"></a>
         {{ post.excerpt }}
       </li>
       {%- endfor -%}

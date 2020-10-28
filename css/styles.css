@@ -13,6 +13,16 @@ aside {
 footer {
   background: lightgrey;
 }
+
+font-family: 'Amatic SC', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Patrick Hand', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Slab', serif;
+
 */
 
 /*========================================================================
@@ -21,16 +31,17 @@ footer {
 
 /* ======================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Nunito:wght@400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
-  background: #ff9e3b;
+  background: floralwhite;
+  color: #464646;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .container-xl {
-  background: white;
-  padding: 0;
-  border: 1px solid #364a2c;
-
+  background: seashell;
 }
 
 .row {
@@ -38,31 +49,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Amatic SC', cursive;
-}
-
-h1 {
-  font-size: 45px;
-}
-h2 {
-  font-size: 43px;
-}
-h3 {
-  font-size: 41px;
-}
-h4 {
-  font-size: 39px;
-}
-h5 {
-  font-size: 37px;
-}
-h6 {
-  font-size: 35px;
+  font-family: 'Nunito', sans-serif;
+  color: #2d2d2d;
 }
 
 a,
 a:visited {
-  color: #658b52;
+  color: black;
+  font-weight: 700;
 }
 
 /*========================================================================
@@ -71,12 +65,19 @@ a:visited {
 
 /* ======================================================================*/
 .header {
-  background: #658b52;
+  padding: 0 10px;
 }
 
 img.logo {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+/* It needs to be 430px */
+.logo {
+  display: block;
+  max-width: 612px;
+  margin: 0 auto;
 }
 
 @media (max-width: 640px) {
@@ -86,9 +87,9 @@ img.logo {
 }
 
 .navbar {
-  border-top: 1px solid #364a2c;
   background: #658b52;
   border-bottom: 1px solid #364a2c;
+  border-top: 1px solid #364a2c;
 }
 
 @media (min-width: 992px) {
@@ -96,11 +97,22 @@ img.logo {
     padding: 0;
   }
   .navbar a {
+    display: inline-block;
     border-right: 1px solid #364a2c;
-    padding: 5px 10px;
+    padding: 5px;
+    transition: 1s ease;
+  }
+  .navbar ul li:first-child {
+    border-left: 1px solid #364a2c;
   }
   .navbar a:hover {
     background: rgba(255, 255, 255, 0.3);
+    transition: 1s ease;
+  }
+
+  /* .navbar a {
+    border-right: 1px solid #364a2c;
+    padding: 5px 10px;
   }
   input.form-control.mr-sm-2 {
     margin-right: -1px !important;
@@ -109,16 +121,19 @@ img.logo {
     height: 47px;
     box-sizing: border-box;
     border-radius: 0;
-  }
+  } */
 }
 
-.navbar a,
-.navbar-toggler {
-  color: #fff;
+.navbar a {
+  color: floralwhite !important;
   font-family: 'Amatic SC', cursive;
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: 700;
 }
 
+.navbar-dark .navbar-toggler-icon {
+  background-color: ivory;
+}
 
 /*========================================================================
 
@@ -131,14 +146,53 @@ article ul.post-list {
 }
 
 .home-post {
-  border-bottom: 1px solid lightgrey;
   margin-bottom: 30px;
+  border-bottom: 8px double lightgrey;
 }
 
+.home-post:last-child {
+  border-bottom: none;
+}
+
+.entry {
+  position: relative;
+}
 
 .entry-header {
-  border-bottom: 1px solid lightgrey;
+  padding: 15px;
+  position: absolute;
+  bottom: 16px;
+  left: 1px;
+  right: 1px;
+  background: #658b52;
+  color: ivory;
+  border-top: 1px solid #364a2c;
+  transition: 1s ease;
+}
+.entry-header:hover {
+  background: rgba(136, 178, 134, 1);
+  transition: 1s ease;
+}
+
+h3.blog-post-title a {
+  font-size: 37px;
+  color: ivory;
+}
+
+h3.blog-post-title a:hover {
+  text-decoration: none;
+}
+
+.entry-header  h3.blog-post-title,
+.entry-header  p.meta {
+  display: inline;
+  vertical-align: center;
+}
+
+.thumbnail img {
+  border-radius: 4px;
   margin-bottom: 15px;
+  border: 1px solid #364a2c;
 }
 
 .img-fluid {
@@ -172,15 +226,54 @@ article ul.post-list {
 
 /* ======================================================================*/
 .widget {
-  border: 1px solid #364a2c;
   margin-bottom: 15px;
 }
 h4.widget-title {
   padding: 8px;
   font-size: 30px;
-  color: #fff;
-  background: #658b52;
-  border-bottom: 1px solid #364a2c;
+  font-family: 'Amatic SC', cursive;
+}
+
+.sidebar-search {
+  background: lightgrey;
+  padding: 20px;
+  border: 7px solid grey;
+  border-radius: 2px;
+}
+.sidebar-search input {
+  border-radius: 2px;
+  border: 1px solid grey;
+  margin: auto;
+  min-width: 100%;
+}
+
+.latest-post {
+  border: 1px solid #ff880f;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  background: #ffbb75;
+}
+.latest-post h4.widget-title {
+  background: #ff9e3b;
+  border-bottom: 1px solid #ff880f;
+  color: #57300a;
+  text-align: center;
+  font-size: 40px;
+}
+.latest-post a {
+  color: #57300a;
+}
+
+.latest-post ul li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.sidebar-img img {
+  max-width: 80px;
+  min-height: 80px;
+  border: 1px solid #ff880f;
+  border-radius: 2px;
 }
 
 .subscribe,
@@ -193,7 +286,6 @@ aside ul.post-list {
   font-size: 13px;
   font-style: italic;
 }
-
 
 /*========================================================================
 
