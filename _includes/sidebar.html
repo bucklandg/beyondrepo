@@ -13,18 +13,18 @@
       {%- for post in site.posts -%}
       <li>
         <div class="row">
-          <div class="col-sm-7">
+          <div class="col-5">
+            <div class="sidebar-img">
+              <img src="{{ post.thumbnail }}">
+            </div>
+          </div>
+          <div class="col-7">
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
           </div>
             <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span class="side-meta">{{ post.date | date: date_format }}</span>-->
-            <div class="col-sm-3">
-              <div class="sidebar-img">
-                <img src="{{ post.thumbnail }}">
-              </div>
-            </div>
           </div>
       </li>
       {%- endfor -%}
@@ -34,7 +34,9 @@
 
 <div class="widget">
   <h4 class="widget-title">Social</h4>
-  <div class="subscribe">
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  </div>
+  <ul class="social-list">
+    <li><a href="#"><img class="social-icon" src="/assets/images/social/fb.svg"></a></li>
+    <li><a href="#"><img class="social-icon" src="/assets/images/social/tw.svg"></a></li>
+    <li><a href="#"><img class="social-icon" src="/assets/images/social/in.svg"></a></li>
+  </ul>
 </div>

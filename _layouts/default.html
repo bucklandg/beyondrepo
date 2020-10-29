@@ -4,23 +4,27 @@
 
   <br>
 
-  <div class="row">
+<div class="container-for-fixed-navbar">
 
-    <div class="col-sm-9">
-      <article>
-        <!-- <div class="ads"><img src="/assets/images/728x90.png"></div> -->
-        {{ content }}
-      </article>
+    <div class="row">
+
+      <div class="col-sm-9">
+        <article>
+          <!-- <div class="ads"><img src="/assets/images/728x90.png"></div> -->
+          {{ content }}
+        </article>
+      </div>
+      <div class="col-sm-3">
+        <aside>
+          {% include sidebar.html %}
+        </aside>
+      </div>
+
     </div>
-    <div class="col-sm-3">
-      <aside>
-        {% include sidebar.html %}
-      </aside>
-    </div>
+
+
+     {% include footer.html %}
 
   </div>
-
-
-   {% include footer.html %}
 
 </div>
